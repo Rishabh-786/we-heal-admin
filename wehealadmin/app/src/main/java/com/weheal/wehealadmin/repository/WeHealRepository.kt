@@ -21,7 +21,7 @@ object WeHealRepository
             WeHealCache.putBuilderNameLiveData("Name" , mutableLiveData)
         }
 
-        firebaseDatabase.reference.child("profile/name").addValueEventListener(object : ValueEventListener{
+        firebaseDatabase.reference.child("dummyData/name").addValueEventListener(object : ValueEventListener{
             override fun onCancelled(error: DatabaseError) {
 
             }
@@ -39,7 +39,7 @@ object WeHealRepository
         return mutableLiveData
     }
     fun pushHiThereToDatabase() {
-        firebaseDatabase.reference.child("profile").child("message").setValue("hi there")
+        firebaseDatabase.reference.child("dummyData").child("message").setValue("hi there")
     }
     fun getNumberOfOnlineHealersLiveData(): MutableLiveData<Info> {
         var mutableLiveData: MutableLiveData<Info>? = WeHealCache.getNumberOfOnlineHealersLiveData("onlineHealers")

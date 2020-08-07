@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
             number_of_ofline_users.text = it.value})
 
 
-         button.setOnClickListener {
-             mainActivityViewModel.pushHiThereToDatabase()
-         }
+        button.setOnClickListener {
+            mainActivityViewModel.pushHiThereToDatabase()
+        }
     }
 }

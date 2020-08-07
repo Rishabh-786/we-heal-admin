@@ -1,21 +1,58 @@
 {
   "project_info": {
-    "project_number": "663485159380",
-    "firebase_url": "https://we-heal-admin.firebaseio.com",
-    "project_id": "we-heal-admin",
-    "storage_bucket": "we-heal-admin.appspot.com"
+    "project_number": "1068893880674",
+    "firebase_url": "https://weheal-5a5ba.firebaseio.com",
+    "project_id": "weheal-5a5ba",
+    "storage_bucket": "weheal-5a5ba.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:663485159380:android:8c812f223d451fcd652841",
+        "mobilesdk_app_id": "1:1068893880674:android:77bd02622b6b1bfd972c3b",
+        "android_client_info": {
+          "package_name": "com.weheal.weheal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068893880674-aoncgihobj0mhkaheualdjvotiidag96.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.weheal.weheal",
+            "certificate_hash": "fbd7d73880b79c0d50f47a2c66475251792d33e3"
+          }
+        },
+        {
+          "client_id": "1068893880674-qoacuglc4g090rerciidl4boqft5ik4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgtM_bM4mzvugbncES6OFijW4gBhh2nEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068893880674-o57olrsl1egqbpsfusr1211fpuv8ersd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068893880674:android:09bd3db5724739c4972c3b",
         "android_client_info": {
           "package_name": "com.weheal.wehealadmin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "663485159380-aas352mun61c3dgcb5pqrb9fpqvb5u22.apps.googleusercontent.com",
+          "client_id": "1068893880674-bb8hh2ifmah2q2vrh5v1arqt1nf8b3be.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.weheal.wehealadmin",
@@ -23,20 +60,20 @@
           }
         },
         {
-          "client_id": "663485159380-ufco99occsn58ph5411k9dsccdncos9m.apps.googleusercontent.com",
+          "client_id": "1068893880674-qoacuglc4g090rerciidl4boqft5ik4p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyASsG-g356edCOaxKvkuy4Lk5gaKF1ryIA"
+          "current_key": "AIzaSyAgtM_bM4mzvugbncES6OFijW4gBhh2nEg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "663485159380-ufco99occsn58ph5411k9dsccdncos9m.apps.googleusercontent.com",
+              "client_id": "1068893880674-o57olrsl1egqbpsfusr1211fpuv8ersd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
