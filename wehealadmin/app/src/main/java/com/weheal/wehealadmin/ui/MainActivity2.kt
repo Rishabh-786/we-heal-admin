@@ -1,11 +1,9 @@
 package com.weheal.wehealadmin.ui
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.weheal.wehealadmin.R
-import com.weheal.wehealadmin.repository.Activity2Repository
 import com.weheal.wehealadmin.viewmodel.Activity2ViewModel
 import kotlinx.android.synthetic.main.activity_main2.*
 
@@ -24,16 +22,14 @@ class MainActivity2 : AppCompatActivity() {
         var email1 = emaillogin.text.toString()
         var password1 =  password.text.toString()
         if (email1.isEmpty()) {
-            emaillogin.setError("please fill the empty box")
+            emaillogin.error = "please fill the empty box"
             emaillogin.requestFocus()
+            return
         }
         if (password1.isEmpty()) {
-            password.setError("please fill the empty box")
+            password.error= "please fill the empty box"
             password.requestFocus()
-        }
-        if (email1.isEmpty()&&password1.isEmpty())
-        {
-
+            return
         }
         if (!email1.isEmpty()&&!password1.isEmpty())
         {

@@ -1,5 +1,6 @@
 package com.weheal.wehealadmin.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -35,7 +36,10 @@ class MainActivity : AppCompatActivity() {
 
 
         button.setOnClickListener {
-            mainActivityViewModel.pushHiThereToDatabase()
+            startActivity(Intent(this,MainActivity2::class.java))
+            finish()
         }
     }
 }
+
+
