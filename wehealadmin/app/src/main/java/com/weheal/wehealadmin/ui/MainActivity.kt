@@ -1,45 +1,33 @@
 package com.weheal.wehealadmin.ui
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.google.firebase.database.FirebaseDatabase
+import androidx.lifecycle.observe
 import com.weheal.wehealadmin.R
-import com.weheal.wehealadmin.model.Info
 import com.weheal.wehealadmin.viewmodel.MainActivityViewModel
-import kotlinx.android.synthetic.main.activity_main.*
+import com.weheal.wehealadmin.weHealAdminAuth.WeHealAuth
+import com.weheal.wehealadmin.weHealAdminAuth.WeHealUserResource
+import com.weheal.wehealadmin.weHealAdminUser.WeHealAdminUser
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mainActivityViewModel: MainActivityViewModel
+    private val mainActivityViewModel : MainActivityViewModel by lazy {
+        ViewModelProvider(this).get(MainActivityViewModel::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        mainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-        mainActivityViewModel.builderNameLiveData.observe(this, Observer {
-            builder_name.text = it.value
+        mainActivityViewModel.currentAppAdminUserLiveData.observe(this, Observer {
+            when(it){
+                is WeHealUserResource.Request->{
+                    Toast.makeText(this,"Successfull",Toast.LENGTH_SHORT).show()
+                }
+            }
         })
-        mainActivityViewModel.numberOfOnlineHealerLiveData.observe(this, Observer {
-            number_of_online_healer.text = it.value
-        })
-        mainActivityViewModel.numberOfOnlineUsersLiveData.observe(this, Observer {
-            number_of_online_users.text = it.value
-        })
-        mainActivityViewModel.numberOfOflineUsersLiveData.observe(this, Observer {
-            number_of_ofline_users.text = it.value})
-
-
-        button.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
-            finish()
-        }
     }
 }
-
-
