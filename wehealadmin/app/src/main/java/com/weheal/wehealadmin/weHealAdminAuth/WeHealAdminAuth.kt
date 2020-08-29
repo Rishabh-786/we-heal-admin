@@ -1,5 +1,6 @@
 package com.weheal.wehealadmin.weHealAdminAuth
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
@@ -29,16 +30,21 @@ object WeHealAuth {
     fun startSignIn() {
         val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
         if (firebaseUser == null) {
+            Log.d("WeHealAuth","Firebase User Null")
          currentAdminUserMutableLiveData.value = WeHealUserResource.Request("")
         }
         else{
+            Log.d("WeHealAuth","Firebase User Not Null")
             val weHealAdminUser:WeHealAdminUser? = WeHealAdminSharedPreferences.getAdminUser()
             if (weHealAdminUser == null)
             {
+                Log.d("WeHealAuth","WeHealadminUser User Null")
                 val newWeHealAdminUser = WeHealAdminUser.create(firebaseUser)
+                WeHealAdminSharedPreferences.setWeHealUser(newWeHealAdminUser)
                  setCurrentAdminUser(newWeHealAdminUser)
             }
             else{
+                Log.d("WeHealAuth","WeHealadminUser User Not Null")
                 setCurrentAdminUser(weHealAdminUser)
             }
         }
