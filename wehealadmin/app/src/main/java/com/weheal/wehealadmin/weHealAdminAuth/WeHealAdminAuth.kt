@@ -21,7 +21,7 @@ sealed class WeHealUserResource<T>(
 object WeHealAuth {
     //Firebase related variables
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
-    private  val currentAdminUserMutableLiveData:MutableLiveData<WeHealUserResource<WeHealAdminUser>> = MutableLiveData()
+    private  val currentAdminUserMutableLiveData:MutableLiveData <WeHealUserResource<WeHealAdminUser>> = MutableLiveData()
     val currentAdminUserLiveData: LiveData<WeHealUserResource<WeHealAdminUser>> = currentAdminUserMutableLiveData
 
     private fun setCurrentAdminUser(newWeHealAdminUser: WeHealAdminUser ){
