@@ -4,56 +4,270 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.ContentFragment">
+
     <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Chat_Statistics" />
 
-                <TextView
-                    android:id="@+id/tv1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_centerHorizontal="true"
-                    android:text="Chat_Statistics" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Select the date for which you need to see the data" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                   android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/tv1"
-                    android:layout_marginTop="20dp"
-                    android:text="Select the date for which you need to see the data" />
+            <DatePicker
+                android:id="@+id/cd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp" />
 
-                <DatePicker
-                    android:id="@+id/cd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/textView3"
-                    android:layout_marginTop="30dp" />
-                <TextView
-                    android:id="@+id/awt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Average WaitingTime = "
-                    android:layout_below="@id/cd"
-                    android:layout_marginTop="20dp" />
-                <TextView
-                    android:id="@+id/awt2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_below="@id/cd"
-                    android:layout_toEndOf="@id/awt1"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"/>
-            </RelativeLayout>
-       </ScrollView>
+            <TextView
+                android:id="@+id/awt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cd"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Average WaitingTime = "
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/awt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cd"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/awt1"
+                android:text=""
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tcs1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/awt1"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Total Chat Session Completed = "
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tcs2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/awt1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/tcs1"
+                android:text=""
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/adc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tcs1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:text="Average Duration Of Chat = "
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/adc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tcs1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/adc1"
+                android:text=""
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tdc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adc1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Total Duration Of Chat = "
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tdc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adc1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/tdc1"
+                android:text=""
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/twc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tdc1"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:text="Total Time Waiting Of Chat = "
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/twc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tdc1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/twc1"
+                android:text=""
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/lcs1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twc1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:text="Longest Chat Session = "
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/lcs2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twc1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/lcs1"
+                android:text=""
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/uhc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lcs1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Unique Healee Count = "
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/uhc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lcs1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/uhc1"
+                android:text=""
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/uhrc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uhc1"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:text="Unique Healer Count  = "
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/uhrc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uhc1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/uhrc1"
+                android:text=""
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tncr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uhrc1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:text="Total Number Of Chat Requests = "
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tncr2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uhrc1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/tncr1"
+                android:text=""
+                android:textFontWeight="500"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/random1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/listView1"
+                android:layout_marginTop="30dp"
+                android:text="We Heal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/random1"
+                android:layout_marginTop="30dp"
+                android:text="We Heal" />
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/tncr2" />
+        </RelativeLayout>
+    </ScrollView>
 
 </FrameLayout>
